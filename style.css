@@ -1,1 +1,25 @@
+#calculator {
+    margin: auto;
+    width: 600px;
+    border: 4px solid black;
+}
 
+#display {
+    width: 500px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 16px auto;
+    text-align: center;
+    font-size: 32px;
+}
+
+#keypad {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+button {
+    width: 100px;
+    margin: 10px;
+}
