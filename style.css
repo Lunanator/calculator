@@ -16,10 +16,11 @@
 #keypad {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 25px;
 }
 
 button {
     width: 100px;
     margin: 10px;
+    font-size: 32px;
 }

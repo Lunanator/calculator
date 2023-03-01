@@ -1,67 +1,105 @@
 
-let input = [];
+let input = "";
 
 const one = document.getElementById("one");
 one.addEventListener('click', () => {
-    input.push(1);
+    if (display.innerHTML = result) {
+        display.innerHTML = input;
+    }
+    input += "1";
     display.innerHTML = input;     
 });
 
 const two = document.getElementById("two");
 two.addEventListener('click', () => {
-    input.push(2);     
+    input += "2";
+    display.innerHTML = input;     
 });
 
 const three = document.getElementById("three");
 three.addEventListener('click', () => {
-    input.push(3);     
+    input += "3";
+    display.innerHTML = input;     
 });
 
 const four = document.getElementById("four");
 four.addEventListener('click', () => {
-    input.push(4);     
+    input += "4";
+    display.innerHTML = input;     
 });
 
 const five = document.getElementById("five");
 five.addEventListener('click', () => {
-    input.push(5);     
+    input += "5";
+    display.innerHTML = input;     
 });
 
 const six = document.getElementById("six");
 six.addEventListener('click', () => {
-    input.push(6);     
+    input += "6";
+    display.innerHTML = input;     
 });
 
 const seven = document.getElementById("seven");
 seven.addEventListener('click', () => {
-    input.push(7);     
+    input += "7";
+    display.innerHTML = input;     
 });
 
 const eight = document.getElementById("eight");
 eight.addEventListener('click', () => {
-    input.push(8);     
+    input += "8";
+    display.innerHTML = input;     
 });
 
 const nine = document.getElementById("nine");
 nine.addEventListener('click', () => {
-    input.push(9);     
+    input += "9";
+    display.innerHTML = input;     
 });
 
 const add = document.getElementById("add");
 add.addEventListener('click', () => {
-    for (let i = 0; i < input.length; i++) {
-        firstNum = firstNum + input[i];
-    }
+    operator = "add";
+    firstNum = input;
+    input = [];    
+});
+
+const subtract = document.getElementById("subtract");
+subtract.addEventListener('click', () => {
+    operator = "subtract";
+    firstNum = input;
+    input = [];    
+});
+
+const multiply = document.getElementById("multiply");
+multiply.addEventListener('click', () => {
+    operator = "multiply";
+    firstNum = input;
+    input = [];    
+});
+
+const divide = document.getElementById("divide");
+divide.addEventListener('click', () => {
+    operator = "divide";
+    firstNum = input;
     input = [];    
 });
 
 const equals = document.getElementById("equals");
 equals.addEventListener('click', () => {
-    for (let i = 0; i < input.length; i++) {
-        secondNum = secondNum + input[i];
+    secondNum = input;
+    if (operator === "add") {
+        result = Number(firstNum) + Number(secondNum);
+    } else if (operator === "subtract") {
+        result = Number(firstNum) - Number(secondNum);
+    } else if (operator === "multiply") {
+        result = Number(firstNum) * Number(secondNum);
+    } else if (operator === "divide") {
+        result = Number(firstNum) / Number(secondNum);
     }
-    result = Number(firstNum) + Number(secondNum);
-    console.log(result);
+    display.innerHTML = result
+    input = "";
 });
 
 const display = document.getElementById("display");
